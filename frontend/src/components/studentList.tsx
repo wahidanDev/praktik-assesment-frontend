@@ -57,7 +57,7 @@ const StudentsList: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-4xl mb-4">Daftar Siswa</h1>
+      <h1 className="text-4xl mb-4 text-center">Daftar Siswa</h1>
       <table className="border-collapse border border-gray-300 w-full">
         <thead>
           <tr>
