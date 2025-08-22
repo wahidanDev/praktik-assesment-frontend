@@ -55,6 +55,8 @@ const StudentsList: React.FC = () => {
   if (loading) return <p>Loading students...</p>;
   if (error) return <p>{error}</p>;
 
+  
+
   return (
     <div>
       <h1 className="text-4xl mb-4 text-center">Daftar Siswa</h1>
@@ -75,7 +77,15 @@ const StudentsList: React.FC = () => {
               <td className="border border-gray-300 px-4 py-2">{student.kode_siswa}</td>
               <td className="border border-gray-300 px-4 py-2">{student.nama_siswa}</td>
               <td className="border border-gray-300 px-4 py-2">{student.alamat_siswa || "-"}</td>
-              <td className="border border-gray-300 px-4 py-2">{student.tgl_siswa || "-"}</td>
+              <td className="border border-gray-300 px-4 py-2">
+                {student.tgl_siswa
+                    ? new Date(student.tgl_siswa).toLocaleDateString("id-ID", {
+                        day: "2-digit",
+                        month: "long",
+                        year: "numeric",
+                    })
+                    : "-"}
+              </td>
               <td className="border border-gray-300 px-4 py-2">{student.jurusan_siswa || "-"}</td>
               <td className="border border-gray-300 px-4 py-2">
                 <button
