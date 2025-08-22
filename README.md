@@ -1,4 +1,5 @@
 # MENJALANKAN FRONTEND
 
-npm install
+npm install - 
 npm run dev
+
